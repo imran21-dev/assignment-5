@@ -32,17 +32,20 @@
             </div>
             <div class="navbar-end flex items-center gap-2">
                <img src="assets/coin.png" alt="">
-               <h3 class="font-medium text-xl"><span>5500</span> BDT</h3>
+               <h3 class="font-medium text-xl"><span id="accountBalance">5500</span> BDT</h3>
             </div>
           </div>
-          <section id="btnSection" class="btnSection   flex justify-center items-center gap-4 pt-16 pb-8 mt-14">
-            <button class="btn bg-[#b4f461] text-lg font-semibold px-8">Donation</button>
-            <button class="btn bg-white border-[#111111]/30 text-lg font-semibold px-8">History</button>
+          <section id="btnSection" class="btnSection bg-white  flex justify-center items-center gap-4 pt-10 pb-8 mt-8">
+            <button id="donationBtn" class="btn bg-[#b4f461] text-lg font-semibold px-8">Donation</button>
+            <button id="historyBtn" class="btn bg-white border-[#111111]/10 text-lg font-semibold px-8">History</button>
           </section>
     </header>
-    <main class="md:container mx-auto flex flex-col gap-10 z-0 pb-20" >
-        <!-- cart 1 -->
-        <div class="hero mx-auto w-max p-2 border-[#111111]/10 border rounded-xl">
+
+
+    <main class="md:container mx-auto " >
+      <section id="donationSection" class="flex flex-col gap-10 z-0 pb-20">
+          <!-- cart 1 -->
+          <div class="hero mx-auto w-max p-2 border-[#111111]/10 border rounded-xl">
             <div class="hero-content flex-col gap-8 items-start lg:flex-row">
                
                 <img
@@ -52,15 +55,15 @@
               <div class=" flex flex-col  gap-3 h-96 justify-evenly ">
                 <div class="bg-[#1111]/5 flex items-center gap-2 w-max px-4 py-2 rounded-lg">
                     <img class="w-6" src="assets/coin.png" alt="">
-                    <h3 class="font-normal text-base"><span>0 </span>BDT</h3>
+                    <h3 class="font-normal text-base"><span id="cartOnedonatedBalance" class="pr-1">100</span>BDT</h3>
                 </div>
-                <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                <h1 id="cartOneTitle" class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                 <p class="py-3 text-base font-light text-[#1111]/70">
                     The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                 </p>
-                <input class="text-base font-light border py-3 px-3 rounded-lg outline-[#b4f461]" type="text" placeholder="Write Donation Amount">
+                <input id="cartOneInput" class="text-base font-light border py-3 px-3 rounded-lg outline-[#b4f461]" type="text" placeholder="Write Donation Amount">
             
-                <button class="btn bg-[#b4f461] text-lg font-semibold">Donate Now</button>
+                <button id="cartOneBtn" class="btn bg-[#b4f461] text-lg font-semibold">Donate Now</button>
               </div>
             </div>
           </div>
@@ -73,15 +76,15 @@
               <div class=" flex flex-col gap-3  h-96 justify-evenly ">
                 <div class="bg-[#1111]/5 flex items-center gap-2 w-max px-4 py-2 rounded-lg">
                     <img class="w-6" src="assets/coin.png" alt="">
-                    <h3 class="font-normal text-base"><span>600 </span>BDT</h3>
+                    <h3 class="font-normal text-base"><span id="cartTwodonatedBalance" class="pr-1">600</span>BDT</h3>
                 </div>
-                <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
+                <h1 id="cartTwoTitle" class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
                 <p class="py-3 text-base font-light text-[#1111]/70">
                     The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
                 </p>
-                <input class="text-base font-light border py-3 px-3 rounded-lg outline-[#b4f461]" type="text" placeholder="Write Donation Amount">
+                <input id="cartTwoInput" class="text-base font-light border py-3 px-3 rounded-lg outline-[#b4f461]" type="text" placeholder="Write Donation Amount">
             
-                <button class="btn bg-[#b4f461] text-lg font-semibold">Donate Now</button>
+                <button id="cartTwoBtn" class="btn bg-[#b4f461] text-lg font-semibold">Donate Now</button>
               </div>
             </div>
           </div>
@@ -94,21 +97,48 @@
                 <div class=" flex flex-col gap-3  h-96 justify-evenly ">
                   <div class="bg-[#1111]/5 flex items-center gap-2 w-max px-4 py-2 rounded-lg">
                       <img class="w-6" src="assets/coin.png" alt="">
-                      <h3 class="font-normal text-base"><span>2500 </span>BDT</h3>
+                      <h3 class="font-normal text-base"><span id="cartThreedonatedBalance" class="pr-1">2500</span>BDT</h3>
                   </div>
-                  <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
+                  <h1 id="cartThreeTitle" class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
                   <p class="py-3 text-base font-light text-[#1111]/70">
                     The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                   </p>
-                  <input class="text-base font-light border py-3 px-3 rounded-lg outline-[#b4f461]" type="text" placeholder="Write Donation Amount">
+                  <input id="cartThreeInput" class="text-base font-light border py-3 px-3 rounded-lg outline-[#b4f461]" type="text" placeholder="Write Donation Amount">
               
-                  <button class="btn bg-[#b4f461] text-lg font-semibold">Donate Now</button>
+                  <button id="cartThreeBtn" class="btn bg-[#b4f461] text-lg font-semibold">Donate Now</button>
                 </div>
               </div>
             </div>
+      </section>
+
+
+      <section id="historySection" class="hidden">
+          <ul id="historyUl" class="gap-6 flex flex-col-reverse pb-10">
+           
+           <!-- dynamic li will appear here -->
+        
+          </ul>
+      </section>
+      <!-- modal -->
+       <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box flex flex-col items-center">
+    <h3 class="text-4xl font-bold">Congrates!</h3>
+    <img class="w-10 pt-4 pb-5" src="assets/coin.png" alt="">
+    <p class="py-2">You Have Donated for Humankind</p>
+    <p class="pt-2 font-bold text-xl">Successfully</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn my-0">close confirmation</button>
+      </form>
+    </div>
+  </div>
+</dialog>
     </main>
-   <footer class="bg-[#f9f7f3] text-center py-12">
-      <h3>2024 Mohammad Imran. All Rights Reserved.</h3>
+   <footer id="footer" class="bg-[#f9f7f3] text-center py-12 ">
+      <h3>2024 Donate Bangladesh. All Rights Reserved.</h3>
    </footer>
     <script src="script.js"></script>
 </body>
