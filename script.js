@@ -26,10 +26,10 @@ function donateHistoryToggle(id) {
 }
 
 function btnColor(btnId) {
-  document.getElementById('donationBtn').className = "btn bg-white border-[#111111]/10 text-lg font-semibold px-8"
-  document.getElementById('historyBtn').className = "btn bg-white border-[#111111]/10 text-lg font-semibold px-8"
+  document.getElementById('donationBtn').className = "btn bg-white border-[#111111]/10 md:text-lg font-semibold text-xs h-0 min-h-0 py-4 md:py-6 flex-nowrap md:px-8"
+  document.getElementById('historyBtn').className = "btn bg-white border-[#111111]/10 md:text-lg font-semibold text-xs h-0 min-h-0 py-4 md:py-6 flex-nowrap md:px-8"
 
-  document.getElementById(btnId).className = "btn bg-[#b4f461] text-lg font-semibold px-8"
+  document.getElementById(btnId).className = "btn bg-[#b4f461] md:text-lg font-semibold text-xs h-0 min-h-0 py-4 md:py-6 flex-nowrap md:px-8"
    
 }
 
@@ -82,9 +82,9 @@ const date = new Date().toLocaleString();
 
              const li = document.createElement('li');
                 li.innerHTML = `
-                  <li class="border p-7 rounded-xl">
-                <h2 class="text-xl font-bold pb-3">${cartOneInputNumber} Taka is ${title}</h2>
-                <h6 class="text-base font-light text-[#1111]/70">Date : ${date}</h6>
+                  <li class="border py-3 px-4 md:py-7 md:px-7 rounded-xl">
+                <h2 class="md:text-xl text-base font-bold md:pb-3 pb-1">${cartOneInputNumber} Taka is ${title}</h2>
+                <h6 class="md:text-base text-xs font-light text-[#1111]/70">Date : ${date}</h6>
             </li>
                 `
                 historyUl.appendChild(li)
@@ -138,9 +138,9 @@ const date = new Date().toLocaleString();
 
              const li = document.createElement('li');
                 li.innerHTML = `
-                  <li class="border p-7 rounded-xl">
-                <h2 class="text-xl font-bold pb-3">${cartOneInputNumber} Taka is ${title}</h2>
-                <h6 class="text-base font-light text-[#1111]/70">Date : ${date}</h6>
+                  <li class="border py-3 px-4 md:py-7 md:px-7 rounded-xl">
+                <h2 class="md:text-xl text-base font-bold md:pb-3 pb-1">${cartOneInputNumber} Taka is ${title}</h2>
+                <h6 class="md:text-base text-xs font-light text-[#1111]/70">Date : ${date}</h6>
             </li>
                 `
                 historyUl.appendChild(li)
@@ -194,9 +194,9 @@ const date = new Date().toLocaleString();
 
              const li = document.createElement('li');
                 li.innerHTML = `
-                  <li class="border p-7 rounded-xl">
-                <h2 class="text-xl font-bold pb-3">${cartOneInputNumber} Taka is ${title}</h2>
-                <h6 class="text-base font-light text-[#1111]/70">Date : ${date}</h6>
+                  <li class="border py-3 px-4 md:py-7 md:px-7 rounded-xl">
+                <h2 class="md:text-xl text-base font-bold md:pb-3 pb-1">${cartOneInputNumber} Taka is ${title}</h2>
+                <h6 class="md:text-base text-xs font-light text-[#1111]/70">Date : ${date}</h6>
             </li>
                 `
                 historyUl.appendChild(li)
