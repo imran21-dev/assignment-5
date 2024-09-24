@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
 <style>
    .header{
     background: linear-gradient(135deg,rgba(255,255,255,0.1)
@@ -29,9 +30,10 @@
                 <img class="w-11 md:block hidden" src="assets/logo.png" alt="">
               <a class="btn btn-ghost font-semibold md:text-xl">Donate Bangladesh</a>
             </div>
-            <div class="navbar-end flex items-center gap-2">
-               <img class="w-5 md:w-8" src="assets/coin.png" alt="">
-               <h3 class="font-medium text-xs md:text-xl"><span id="accountBalance">5500</span> BDT</h3>
+            <div class="navbar-end flex items-center md:gap-2">
+               <img class="hidden md:block md:w-8" src="assets/coin.png" alt="">
+               <i class="fa-regular fa-bangladeshi-taka-sign text-xs pr-1 block md:hidden"></i>
+               <h3 class="font-medium text-xs md:text-xl flex items-center gap-1"><span id="accountBalance">9999</span> <span class="hidden md:block">BDT</span></h3>
             </div>
           </div>
           <section id="btnSection" class="btnSection bg-white  flex justify-center items-center gap-4 md:pt-10 md:pb-8 md:mt-8 py-3">
@@ -44,20 +46,20 @@
     <main class="md:container mx-auto " >
       <section id="donationSection" class="flex flex-col gap-10 z-0 px-5 md:px-0 pb-20">
           <!-- cart 1 -->
-          <div class="hero mx-auto md:w-max md:p-2 border-[#111111]/10 border rounded-xl">
-            <div class="hero-content flex-col md:gap-8 items-start lg:flex-row">
+          <div class="hero mx-auto md:w-full md:p-2 border-[#111111]/10 border rounded-xl">
+            <div class="hero-content max-w-full  flex-col md:gap-8 items-start lg:flex-row">
                
                 <img
                 src="assets/noakhali.png"
                 class=" rounded-lg " />
              
-              <div class=" flex flex-col  md:gap-3 gap-2 md:h-96 md:justify-evenly ">
+              <div class=" flex flex-col  md:gap-3 gap-2 md:h-full md:justify-evenly ">
                 <div class="bg-[#1111]/5 flex items-center md:gap-2 gap-1 w-max px-4 py-2 rounded-lg">
                     <img class="md:w-6 w-4" src="assets/coin.png" alt="">
                     <h3 class="font-normal text-xs md:text-base"><span id="cartOnedonatedBalance" class="pr-1">100</span>BDT</h3>
                 </div>
                 <h1 id="cartOneTitle" class="md:text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
-                <p class="md:py-3 md:text-base text-sm font-light text-[#1111]/70">
+                <p class="md:py-3  md:text-base text-sm font-light text-[#1111]/70">
                     The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                 </p>
                 <input id="cartOneInput" class="md:text-base text-sm font-light border py-3 px-3 rounded-lg outline-[#b4f461]" type="text" placeholder="Write Donation Amount">
@@ -67,12 +69,12 @@
             </div>
           </div>
           <!-- cart 2 -->
-        <div class="hero mx-auto md:w-max md:p-2 border-[#111111]/10 border rounded-xl">
-            <div class="hero-content flex-col md:gap-8 items-start lg:flex-row">
+        <div class="hero mx-auto md:w-full md:p-2 border-[#111111]/10 border rounded-xl">
+            <div class="hero-content max-w-full flex-col md:gap-8 items-start lg:flex-row">
               <img
                 src="assets/feni.png"
                 class=" rounded-lg "/>
-              <div class=" flex flex-col md:gap-3 gap-2  md:h-96 md:justify-evenly ">
+              <div class=" flex flex-col md:gap-3 gap-2  md:h-full md:justify-evenly ">
                 <div class="bg-[#1111]/5 flex items-center md:gap-2 gap-1 w-max px-4 py-2 rounded-lg">
                     <img class="md:w-6 w-4" src="assets/coin.png" alt="">
                     <h3 class="font-normal text-xs md:text-base"><span id="cartTwodonatedBalance" class="pr-1">600</span>BDT</h3>
@@ -88,12 +90,12 @@
             </div>
           </div>
           <!-- cart-3 -->
-          <div class="hero mx-auto md:w-max md:p-2 border-[#111111]/10 border rounded-xl">
-              <div class="hero-content flex-col md:gap-8 items-start lg:flex-row">
+          <div class="hero mx-auto md:w-full md:p-2 border-[#111111]/10 border rounded-xl">
+              <div class="hero-content max-w-full flex-col md:gap-8 items-start lg:flex-row">
                 <img
                   src="assets/quota-protest.png"
                   class=" rounded-lg"/>
-                <div class=" flex flex-col md:gap-3 gap-2  md:h-96 md:justify-evenly ">
+                <div class=" flex flex-col md:gap-3 gap-2  md:h-full md:justify-evenly ">
                   <div class="bg-[#1111]/5 flex items-center md:gap-2 gap-1 w-max px-4 py-2 rounded-lg">
                       <img class="md:w-6 w-4" src="assets/coin.png" alt="">
                       <h3 class="font-normal text-xs md:text-base"><span id="cartThreedonatedBalance" class="pr-1">2500</span>BDT</h3>
@@ -105,6 +107,27 @@
                   <input id="cartThreeInput" class="md:text-base text-sm font-light border py-3 px-3 rounded-lg outline-[#b4f461]" type="text" placeholder="Write Donation Amount">
               
                   <button id="cartThreeBtn" class="btn bg-[#b4f461] md:text-lg font-semibold">Donate Now</button>
+                </div>
+              </div>
+            </div>
+            <!-- cart 4 -->
+          <div class="hero mx-auto md:w-full md:p-2 border-[#111111]/10 border rounded-xl">
+              <div class="hero-content max-w-full flex-col md:gap-8 items-start lg:flex-row">
+                <img
+                  src="assets/orphan.png"
+                  class=" rounded-lg"/>
+                <div class=" flex flex-col md:gap-3 gap-2  md:h-full md:justify-evenly ">
+                  <div class="bg-[#1111]/5 flex items-center md:gap-2 gap-1 w-max px-4 py-2 rounded-lg">
+                      <img class="md:w-6 w-4" src="assets/coin.png" alt="">
+                      <h3 class="font-normal text-xs md:text-base"><span id="cartFourdonatedBalance" class="pr-1">25000</span>BDT</h3>
+                  </div>
+                  <h1 id="cartFourTitle" class="md:text-xl font-bold">Donate for Orphans</h1>
+                  <p class="md:py-3 md:text-base text-sm font-light text-[#1111]/70">
+                    Your support can bring hope and a brighter future to children who have lost their families. Every donation helps provide essential care, education, and a safe environment for orphans in need. By contributing, you're giving these children the opportunity to grow, learn, and thrive. Together, we can make a difference in their lives and offer them the chance for a better tomorrow.
+                  </p>
+                  <input id="cartFourInput" class="md:text-base text-sm font-light border py-3 px-3 rounded-lg outline-[#b4f461]" type="text" placeholder="Write Donation Amount">
+              
+                  <button id="cartFourBtn" class="btn bg-[#b4f461] md:text-lg font-semibold">Donate Now</button>
                 </div>
               </div>
             </div>

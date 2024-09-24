@@ -16,7 +16,7 @@ window.onscroll = function () {
  
 }
 
-// donation & history toggle function here-------------
+// donation & history reusable functions here-------------
 
 function donateHistoryToggle(id) {
     document.getElementById('donationSection').classList.add('hidden')
@@ -68,7 +68,7 @@ const date = new Date().toLocaleString();
     const cartOneInputNumber = parseFloat(cartOneInput);
     
     if (!isNaN(cartOneInputNumber)) {
-        if (cartOneInputNumber < 0) {
+        if (cartOneInputNumber < 1) {
             alert('Invalid donation amount!')
     document.getElementById('cartOneInput').value = ""
 
@@ -91,7 +91,9 @@ const date = new Date().toLocaleString();
             
         }
         else{
-            alert('Invalid donation amount!')
+            alert('You do not have sufficient balance!')
+    document.getElementById('cartOneInput').value = ""
+
             return
         }
         document.getElementById('cartOnedonatedBalance').innerText = newDonatedBalance
@@ -124,7 +126,7 @@ const date = new Date().toLocaleString();
     const cartOneInputNumber = parseFloat(cartOneInput);
     
     if (!isNaN(cartOneInputNumber)) {
-        if (cartOneInputNumber < 0) {
+        if (cartOneInputNumber < 1) {
             alert('Invalid donation amount!')
     document.getElementById('cartTwoInput').value = ""
 
@@ -147,7 +149,9 @@ const date = new Date().toLocaleString();
             
         }
         else{
-            alert('Invalid donation amount!')
+            alert('You do not have sufficient balance!')
+    document.getElementById('cartTwoInput').value = ""
+
             return
         }
         document.getElementById('cartTwodonatedBalance').innerText = newDonatedBalance
@@ -180,7 +184,7 @@ const date = new Date().toLocaleString();
     const cartOneInputNumber = parseFloat(cartOneInput);
     
     if (!isNaN(cartOneInputNumber)) {
-        if (cartOneInputNumber < 0) {
+        if (cartOneInputNumber < 1) {
             alert('Invalid donation amount!')
     document.getElementById('cartThreeInput').value = ""
 
@@ -203,7 +207,9 @@ const date = new Date().toLocaleString();
             
         }
         else{
-            alert('Invalid donation amount!')
+            alert('You do not have sufficient balance!')
+    document.getElementById('cartThreeInput').value = ""
+
             return
         }
         document.getElementById('cartThreedonatedBalance').innerText = newDonatedBalance
@@ -215,6 +221,63 @@ const date = new Date().toLocaleString();
     }
     
     document.getElementById('cartThreeInput').value = ""
+
+    
+    
+})
+// cart 4 function--------------
+
+document.getElementById('cartFourBtn').addEventListener('click', function () {
+const date = new Date().toLocaleString();
+
+    const accountBalance = document.getElementById('accountBalance').innerText;
+    const title = document.getElementById('cartFourTitle').innerText;
+    let cartOnedonatedBalance = document.getElementById('cartFourdonatedBalance').innerText;
+    let cartOneInput = document.getElementById('cartFourInput').value;
+
+    const accountBalanceNumber = parseFloat(accountBalance);
+    const cartOnedonatedBalanceNumber = parseFloat(cartOnedonatedBalance);
+   
+    const cartOneInputNumber = parseFloat(cartOneInput);
+    
+    if (!isNaN(cartOneInputNumber)) {
+        if (cartOneInputNumber < 1) {
+            alert('Invalid donation amount!')
+    document.getElementById('cartFourInput').value = ""
+
+            return
+        }
+        const newDonatedBalance = cartOnedonatedBalanceNumber + cartOneInputNumber;
+        if (cartOneInputNumber <= accountBalanceNumber) {
+            const newAccountBalance = accountBalanceNumber - cartOneInputNumber;
+            document.getElementById('accountBalance').innerText = newAccountBalance
+             my_modal_1.showModal()
+
+             const li = document.createElement('li');
+                li.innerHTML = `
+                  <li class="border py-3 px-4 md:py-7 md:px-7 rounded-xl">
+                <h2 class="md:text-xl text-base font-bold md:pb-3 pb-1">${cartOneInputNumber} Taka is ${title}</h2>
+                <h6 class="md:text-base text-xs font-light text-[#1111]/70">Date : ${date}</h6>
+            </li>
+                `
+                historyUl.appendChild(li)
+            
+        }
+        else{
+            alert('You do not have sufficient balance!')
+    document.getElementById('cartFourInput').value = ""
+
+            return
+        }
+        document.getElementById('cartFourdonatedBalance').innerText = newDonatedBalance
+    }
+    else{
+        alert('Invalid donation amount!')
+
+    
+    }
+    
+    document.getElementById('cartFourInput').value = ""
 
     
     
